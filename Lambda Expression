@@ -1,0 +1,38 @@
+package Demo01_ImpClass;
+
+@FunctionalInterface // This indicates our Interface contains atleast or atmost one Abstract Method
+public interface MyInterface {
+        void SayHello();// Here is the atleast one Abstract Method,
+}
+_________________________________________________________________________________________________
+
+package Demo01_ImpClass;
+
+public class MyInterfaceimpl implements MyInterface {
+
+	@Override    // It is the duty of child class to implement unimplemented methods
+	//Parent class  ref can call overhidden methods,
+	public void SayHello() {
+		//This child class MyInterfaceimpl define SayHello() method
+		System.out.println("Hello");
+	}
+
+}
+__________________________________________________________________________________________________________
+
+package Demo01_ImpClass;
+
+public class UsingImplementationClass {
+
+	public static void main(String[] args) {
+		//ParentClass ref= child class address
+		MyInterface m= new MyInterfaceimpl();  // MyInterfaceimpl is the child class of MyInterface interface,
+		//Parent class  Ref (i.e  m) can call overridden methods,
+		
+		m.SayHello();
+	//There are 3 ways to implement/define Abstract method and use/call it,
+    //1. By using Implementation class,
+	}
+
+}
+
